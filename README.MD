@@ -19,8 +19,8 @@ Automated validation bot for the Stork Oracle network. This bot helps you automa
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/yourusername/stork-oracle-auto-bot.git
-   cd stork-oracle-auto-bot
+   git clone https://github.com/K4nes/stork
+   cd stork
    ```
 
 2. Install dependencies:
@@ -33,6 +33,7 @@ Automated validation bot for the Stork Oracle network. This bot helps you automa
    npx playwright install
    npx playwright install-deps
    ```
+
 If you had a permission denied issue try to delete the node_modules and reinstall
 ```bash
    rm -rf node_modules
