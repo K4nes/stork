@@ -11,7 +11,7 @@ Automated validation bot for the Stork Oracle network. This bot helps you automa
 
 ## Requirements
 
-- Node.js 16 or higher
+- Node.js 18 or higher
 - Playwright
 - A Stork Oracle account
 
@@ -33,6 +33,11 @@ Automated validation bot for the Stork Oracle network. This bot helps you automa
    npx playwright install
    npx playwright install-deps
    ```
+If you had a permission denied issue try to delete the node_modules and reinstall
+```bash
+   rm -rf node_modules
+   npm install axios playwright log-update chalk ora
+```
 
 ## Configuration
 
