@@ -104,7 +104,12 @@ const fetchAndValidatePrices = async () => {
         id = userId;
         stork_signed_prices_valid_count = stats.stork_signed_prices_valid_count;
         stork_signed_prices_invalid_count = stats.stork_signed_prices_invalid_count;
-        lastVerifiedDate = new Date(stats.stork_signed_prices_last_verified_at).toLocaleString();
+
+        // Convert timestamp to UTC+7 (Asia/Jakarta timezone)
+        lastVerifiedDate = new Date(stats.stork_signed_prices_last_verified_at).toLocaleString('en-US', {
+            timeZone: 'Asia/Jakarta', // UTC+7
+            hour12: false, // Use 24-hour format
+        });
 
         // Fetch stork signed prices
         const pricesResponse = await axios.get('https://app-api.jp.stork-oracle.network/v1/stork_signed_prices', {
